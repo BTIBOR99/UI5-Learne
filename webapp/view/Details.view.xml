@@ -1,0 +1,39 @@
+<mvc:View controllerName="learning.controller.Details"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title1}">
+       <content>
+     <FlexBox id="_IDGenFlexBox2"
+        items="{ path: 'DetailsModel>/' }"
+		height="auto"
+		width="auto"
+		wrap="Wrap"
+     >
+         <items>
+            <FlexBox id="_IDGenFlexBox3" width="100%"
+			direction="Column" 
+            height="auto" 
+            alignItems="Center" 
+            justifyContent="Center"
+			alignContent="Center">
+
+      		<Text id="_IDGenText6" text="Méret:"/>      
+            <Text id="_IDGenText7" text="{DetailsModel>ZSize}" />
+	        <Text id="_IDGenText8" text="Memória:"/>
+		    <Text id="_IDGenText9" text="{DetailsModel>Memory}"  />
+	        <Text id="_IDGenText10" text="Processzor:"/>
+		    <Text id="_IDGenText11" text="{DetailsModel>Processor}"  />
+	        <Text id="_IDGenText12" text="Súly:"/>
+		    <Text id="_IDGenText13" text="{DetailsModel>Weight}"  />
+            
+		
+
+            </FlexBox>
+     </items>
+    
+    </FlexBox>
+
+
+</content>
+    </Page>
+</mvc:View>

@@ -1,7 +1,79 @@
 <mvc:View controllerName="learning.controller.View"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page id="page" title="{i18n>title1}">
+       <content>
+
+     <!-- <FlexBox id="_IDGenFlexBox1"
+        items="{ path: 'DataModel>/' }"
+		height="auto"
+		width="auto"
+		wrap="Wrap"
+     >
+         <items>
+            <FlexBox id="_IDGenFlexBox" width="100%"
+			direction="Column"
+            height="auto"
+            alignItems="Center"
+            justifyContent="Center"
+			alignContent="Center">
+
+      		<Text id="_IDGenText" text="Név:"/>
+            <Text id="_IDGenText1" text="{DataModel>Name}" />
+	        <Text id="_IDGenText2" text="Ár:"/>
+		    <Text id="_IDGenText3" text="{DataModel>Price}"  />
+	        <Text id="_IDGenText4" text="Model:"/>
+		    <Text id="_IDGenText5" text="{DataModel>Model}"  />
+
+
+
+            </FlexBox>
+
+
+     </items>
+
+    </FlexBox> -->
+
+   <Table   id="_IDGenTable"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{ path : 'Datamodel>/'}"
+		>
+			<columns>
+				<Column
+					hAlign="Begin"
+					minScreenWidth="Small"
+					demandPopin="true"
+					width="5em"
+				>
+					<Text text="{i18n>columnName}" />
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>columnPrice}" />
+				</Column>
+				<Column
+					hAlign="End"
+					minScreenWidth="Small"
+					demandPopin="true"
+				>
+					<Text text="{i18n>columnModel}" />
+				</Column>
+			</columns>
+			<items>
+				 <ColumnListItem
+					type="Navigation"
+					press=".onPress"
+				> 
+					<cells> 
+						<Text text="{DataModel>Name}" />
+
+					 </cells> 
+			 </ColumnListItem> 
+			</items>
+        </Table>
+
+</content>
     </Page>
 </mvc:View>

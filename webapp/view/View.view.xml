@@ -6,7 +6,7 @@
     <Page id="page" title="{i18n>title1}">
        <content>
 
-     <!-- <FlexBox id="_IDGenFlexBox1"
+      <!-- <FlexBox id="_IDGenFlexBox1"
         items="{ path: 'DataModel>/' }"
 		height="auto"
 		width="auto"
@@ -34,12 +34,12 @@
 
      </items>
 
-    </FlexBox> -->
+    </FlexBox>  -->
 
-   <Table   id="_IDGenTable"
+    <Table   id="_IDGenTable"
 			class="sapUiResponsiveMargin"
 			width="auto"
-			items="{ path : 'Datamodel>/'}"
+			items="{ path : 'DataModel>/'}"
 		>
 			<columns>
 				<Column
@@ -67,12 +67,13 @@
 					press=".onPress"
 				> 
 					<cells> 
-						<Text text="{DataModel>Name}" />
-
+						<ObjectIdentifier title="{DataModel>Name}" />
+						<Text text="{DataModel>Price}" />
+						<Text text="{DataModel>Model}" />
 					 </cells> 
 			 </ColumnListItem> 
 			</items>
-        </Table>
+        </Table> 
 
 </content>
     </Page>

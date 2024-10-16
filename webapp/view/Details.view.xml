@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="page2" title="{i18n>title1}">
        <content>
-     <FlexBox id="_IDGenFlexBox2"
+     <!-- <FlexBox id="_IDGenFlexBox2"
         items="{ path: 'DetailsModel>/' }"
 		height="auto"
 		width="auto"
@@ -31,8 +31,50 @@
             </FlexBox>
      </items>
     
-    </FlexBox>
+    </FlexBox> -->
 
+ <Table   id="_IDGenTable2"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{ path : 'DetailsModel>/'}"
+		>
+			<columns>
+				<Column
+					hAlign="Begin"
+					minScreenWidth="Small"
+					demandPopin="true"
+					width="5em"
+				>
+					<Text text="{i18n>columnSize}" />
+				</Column>
+				<Column hAlign="End">
+					<Text text="{i18n>columnMemory}" />
+				</Column>
+				<Column
+					hAlign="End"
+					minScreenWidth="Small"
+					demandPopin="true"
+				>
+					<Text text="{i18n>columnProcessor}" />
+				</Column>
+
+                <Column hAlign="End">
+					<Text text="{i18n>columnWeight}" />
+				</Column>
+			</columns>
+			<items>
+				 <ColumnListItem
+					type="Navigation"
+				> 
+					<cells> 
+						<ObjectIdentifier title="{DetailsModel>ZSize}" />
+						<Text text="{DetailsModel>Memory}" />
+						<Text text="{DetailsModel>Processor}" />
+                        <Text text="{DetailsModel>Weight}" />
+					 </cells> 
+			 </ColumnListItem> 
+			</items>
+        </Table> 
 
 </content>
     </Page>

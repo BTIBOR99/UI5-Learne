@@ -99,6 +99,11 @@
           "target": [
             "TargetView"
           ]
+        },
+        {
+        "pattern": "",
+        "name": "Details",
+        "target" : "Details"
         }
       ],
       "targets": {
@@ -108,6 +113,10 @@
           "clearControlAggregation": false,
           "viewId": "View",
           "viewName": "View"
+        },
+        "Details" : {
+          "id": "Details",
+          "name": "Details"
         }
       }
     },
